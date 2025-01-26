@@ -25,5 +25,5 @@
   "include": [
     "lib"
   ],
-  "exclude": ["node_modules", "lib/__test__", "dist"]
+  "exclude": ["node_modules", "__test__", "dist"]
 }
