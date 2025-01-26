@@ -1,0 +1,13 @@
+{
+  "name": "starwar-universe",
+  "version": "1.0.0",
+  "author": "Narendra Patil",
+  "main": "index.js",
+  "description": "",
+  "scripts": {
+    "dev:lib": "pnpm --filter @etraveli/ui-library storybook",
+    "build:lib": "pnpm --filter @etraveli/ui-library build"
+  },
+  "keywords": [],
+  "license": "ISC"
+}
