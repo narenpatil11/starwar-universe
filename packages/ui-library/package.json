@@ -18,7 +18,8 @@
     "dev": "storybook dev -p 6006",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "test": "vitest",
+    "test": "vitest --watch=false",
+    "test:watch": "vitest",
     "build-storybook": "storybook build",
     "preinstall": "pnpm exec playwright install"
   },

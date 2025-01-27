@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "author": "Narendra Patil",
   "description": "",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
   "scripts": {
     "update": "rush update && rush check",
     "preinstall": "rush update && exit 0",
@@ -13,7 +18,7 @@
     "build:lib": "pnpm --filter @etraveli/ui-library build",
     "build:app": "pnpm --filter @etraveli/starwar-universe-app dev",
     "build": "rush build --verbose --to git:origin/main",
-    "test": "rush test"
+    "test": "pnpm run \"/^test:.*/\""
   },
   "keywords": [],
   "license": "ISC"
