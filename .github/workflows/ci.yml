@@ -24,7 +24,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18 # Use version 18.x of Node.js
-          cache: pnpm
 
       # Step 3: Install pnpm
       - name: Install pnpm
