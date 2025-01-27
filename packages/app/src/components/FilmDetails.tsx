@@ -1,6 +1,7 @@
 import {IFilm} from "../utils/swapi.ts";
 import {FC} from "react";
 import {EMPTY_DETAILS_MSG} from "../utils/constants.ts";
+import {ErrorBoundary} from "./ErrorBoundary.tsx";
 
 /**
  * Interface representing the properties for displaying film details.
@@ -21,20 +22,22 @@ export const FilmDetails: FC<IFilmDetailsProps> = ({filmDetails}) => {
     if (!filmDetails) return EMPTY_DETAILS_MSG;
 
     return (
-        <figure>
-            <blockquote className="blockquote">
-                <h2>{filmDetails?.title}</h2>
-            </blockquote>
+        <ErrorBoundary>
+            <figure>
+                <blockquote className="blockquote">
+                    <h2>{filmDetails?.title}</h2>
+                </blockquote>
 
-            <figcaption className="blockquote-footer fs-5 mt-3">
-                <cite title={filmDetails?.opening_crawl}>
-                    {filmDetails?.opening_crawl}
-                </cite>
-            </figcaption>
-            <p className="text-body-secondary">
-                <b>Producer</b>: {filmDetails?.producer}
-            </p>
-        </figure>
+                <figcaption className="blockquote-footer fs-5 mt-3">
+                    <cite title={filmDetails?.opening_crawl}>
+                        {filmDetails?.opening_crawl}
+                    </cite>
+                </figcaption>
+                <p className="text-body-secondary">
+                    <b>Producer</b>: {filmDetails?.producer}
+                </p>
+            </figure>
+        </ErrorBoundary>
     );
 }
 

@@ -24,7 +24,7 @@ export interface IFilmListProps {
  *
  */
 export const FilmList: FC<IFilmListProps> = ({filmList, onSelectFilm, selectedFilm}) => {
-    return (filmList?.map((film: IFilm) => (
+    return filmList?.map((film: IFilm) => (
         <ListGroupItem
             active={selectedFilm?.episode_id === film.episode_id}
             key={film.episode_id + film.title}
@@ -47,6 +47,6 @@ export const FilmList: FC<IFilmListProps> = ({filmList, onSelectFilm, selectedFi
                 </span>
             </li>
         </ListGroupItem>
-    )))
+    ))
 };
 

@@ -6,9 +6,10 @@
   "scripts": {
     "dev:app": "pnpm --filter @etraveli/starwar-universe-app dev",
     "dev:lib": "pnpm --filter @etraveli/ui-library storybook",
+    "test:app": "pnpm --filter @etraveli/starwar-universe-app test",
+    "test:lib": "pnpm --filter @etraveli/ui-library test",
     "build:lib": "pnpm --filter @etraveli/ui-library build",
-    "build:app": "pnpm --filter @etraveli/starwar-universe-app dev",
-    "test:lib": "pnpm --filter @etraveli/ui-library test"
+    "build:app": "pnpm --filter @etraveli/starwar-universe-app dev"
   },
   "keywords": [],
   "license": "ISC"

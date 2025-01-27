@@ -1,7 +1,7 @@
 import {useCallback, useEffect, useState} from "react";
 import {Button, ButtonGroup, Loader, ListGroup,} from "@etraveli/ui-library";
 import {SORT_BY_NAME, SORT_BY_YEAR} from "./utils/constants.ts";
-import {FilmList} from "./components";
+import {FilmList, ErrorBoundary} from "./components";
 import {useFilms} from "./hooks/use-films.tsx";
 import {IFilm} from "./utils/swapi.ts";
 import {FilmDetails} from "./components/FilmDetails.tsx";
@@ -67,9 +67,11 @@ function App() {
                           Loading...
                         </Loader>}
                         {!loading && !error &&
-                          <ListGroup>
-                            <FilmList filmList={films} onSelectFilm={setSelectedData} selectedFilm={selected}/>
-                          </ListGroup>
+                          <ErrorBoundary>
+                            <ListGroup>
+                              <FilmList filmList={films} onSelectFilm={setSelectedData} selectedFilm={selected}/>
+                            </ListGroup>
+                          </ErrorBoundary>
                         }
                     </div>
                     <div className="col p-3 border ">
