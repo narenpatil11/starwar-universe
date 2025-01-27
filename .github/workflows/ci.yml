@@ -39,11 +39,11 @@ jobs:
 
       # Step 7: Run Tests
       - name: Run Tests
-        run: rush test
+        run: pnpm test
 
       # Step 6: Build Packages
       - name: Build Packages
-        run: rush build
+        run: pnpm build
 
     #      - name: Verify Change Logs
     #        run: node common/scripts/install-run-rush.js change --verify
