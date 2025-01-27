@@ -4,7 +4,6 @@
  */
 {
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
-
   /**
    * (Required) This specifies the version of the Rush engine to be used in this repo.
    * Rush's "version selector" feature ensures that the globally installed tool will
@@ -17,7 +16,6 @@
    * correct error-underlining and tab-completion for editors such as VS Code.
    */
   "rushVersion": "5.118.5",
-
   /**
    * The next field selects which package manager should be installed and determines its version.
    * Rush installs its own local copy of the package manager to ensure that your build process
@@ -27,7 +25,6 @@
    * for details about these alternatives.
    */
   "pnpmVersion": "7.33.5",
-
   // "npmVersion": "6.14.15",
   // "yarnVersion": "1.9.4",
 
@@ -43,7 +40,6 @@
    * LTS versions: https://nodejs.org/en/download/releases/
    */
   "nodeSupportedVersionRange": ">=14.15.0 <15.0.0 || >=16.13.0 <17.0.0 || >=18.15.0 <19.0.0",
-
   /**
    * If the version check above fails, Rush will display a message showing the current
    * node version and the supported version range. You can use this setting to provide
@@ -204,9 +200,8 @@
      *
      * If no commit message is set it will default to 'Rush change'
      */
-     // "changefilesCommitMessage": "Rush change"
+    // "changefilesCommitMessage": "Rush change"
   },
-
   "repository": {
     /**
      * The URL of this Git repository, used by "rush change" to determine the base branch for your PR.
@@ -237,7 +232,6 @@
      */
     // "defaultRemote": "origin"
   },
-
   /**
    * Event hooks are customized script actions that Rush executes when specific events occur
    */
@@ -248,33 +242,27 @@
     "preRushInstall": [
       // "common/scripts/pre-rush-install.js"
     ],
-
     /**
      * A list of shell commands to run after "rush install" or "rush update" finishes installation
      */
     "postRushInstall": [],
-
     /**
      * A list of shell commands to run before "rush build" or "rush rebuild" starts building
      */
     "preRushBuild": [],
-
     /**
      * A list of shell commands to run after "rush build" or "rush rebuild" finishes building
      */
     "postRushBuild": [],
-
     /**
      * A list of shell commands to run before the "rushx" command starts
      */
     "preRushx": [],
-
     /**
      * A list of shell commands to run after the "rushx" command finishes
      */
     "postRushx": []
   },
-
   /**
    * Rush can collect anonymous telemetry about everyday developer activity such as
    * success/failure of installs, builds, and other operations.  You can use this to identify
@@ -395,11 +383,21 @@
     //   // "tags": [ "1.0.0-release", "frontend-team" ]
     // },
     //
-     {
-       "packageName": "@etraveli/ui-library",
-       "projectFolder": "packages/ui-library",
-       "reviewCategory": "production",
-       "tags": [ "frontend-team" ]
-     }
+    {
+      "packageName": "@etraveli/ui-library",
+      "projectFolder": "packages/ui-library",
+      "reviewCategory": "production",
+      "tags": [
+        "frontend-team"
+      ]
+    },
+    {
+      "packageName": "@etraveli/starwar-universe-app",
+      "projectFolder": "packages/app",
+      "reviewCategory": "production",
+      "tags": [
+        "frontend-team"
+      ]
+    }
   ]
 }

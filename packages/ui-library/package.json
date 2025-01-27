@@ -2,13 +2,16 @@
   "name": "@etraveli/ui-library",
   "version": "0.0.1",
   "type": "module",
-  "files": ["dist"],
-  "main": "./dist/my-lib.umd.cjs",
-  "module": "./dist/my-lib.js",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/ui-library.umd.cjs",
+  "module": "./dist/ui-library.js",
   "exports": {
     ".": {
-      "import": "./dist/my-lib.js",
-      "require": "./dist/my-lib.umd.cjs"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/ui-library.js",
+      "require": "./dist/ui-library.umd.cjs"
     }
   },
   "scripts": {
@@ -25,9 +28,9 @@
     "classnames": "^2.5.1"
   },
   "peerDependencies": {
+    "bootstrap": ">=5.3.3",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "bootstrap": ">=5.3.3"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "3.2.4",
@@ -61,6 +64,7 @@
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
     "vite": "^6.0.5",
+    "vite-plugin-dts": "^4.5.0",
     "vitest": "^3.0.4",
     "vitest-browser-react": "^0.0.4"
   },
