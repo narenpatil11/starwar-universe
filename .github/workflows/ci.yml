@@ -37,13 +37,14 @@ jobs:
       - name: Install Dependencies
         run: rush install
 
+      # Step 6: Build Packages
+      - name: Build Packages
+        run: pnpm build
+
       # Step 7: Run Tests
       - name: Run Tests
         run: pnpm test
 
-      # Step 6: Build Packages
-      - name: Build Packages
-        run: pnpm build
 
     #      - name: Verify Change Logs
     #        run: node common/scripts/install-run-rush.js change --verify
