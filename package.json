@@ -4,8 +4,10 @@
   "author": "Narendra Patil",
   "description": "",
   "scripts": {
+    "update": "rush update && rush check",
+    "preinstall": "rush update && exit 0",
     "dev:app": "pnpm --filter @etraveli/starwar-universe-app dev",
-    "dev:lib": "pnpm --filter @etraveli/ui-library storybook",
+    "dev:lib": "pnpm --filter @etraveli/ui-library dev",
     "test:app": "pnpm --filter @etraveli/starwar-universe-app test",
     "test:lib": "pnpm --filter @etraveli/ui-library test",
     "build:lib": "pnpm --filter @etraveli/ui-library build",
