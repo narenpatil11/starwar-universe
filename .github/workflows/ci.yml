@@ -7,28 +7,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    #    steps:
-    #      - uses: actions/checkout@v3
-    #        with:
-    #          fetch-depth: 2
-    #      - name: Git config user
-    #        uses: snow-actions/git-config-user@v1.0.0
-    #        with:
-    #          name: narenpatil11
-    #          email: narendra_patil_g@outlook.com
-    #      - uses: actions/setup-node@v3
-    #        with:
-    #          node-version: 18
-    #      - name: Verify Change Logs
-    #        run: node common/scripts/install-run-rush.js change --verify
-    #      - name: Rush Install
-    #        run: node common/scripts/install-run-rush.js install
-    #      - name: Rush rebuild
-    #        run: node common/scripts/install-run-rush.js rebuild --verbose --production
     steps:
-      # Step 1: Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Git config user
+        uses: snow-actions/git-config-user@v1.0.0
+        with:
+          name: narenpatil11
+          email: narendra_patil_g@outlook.com
 
       # Step 2: Setup Node.js
       - name: Setup Node.js
@@ -60,3 +49,10 @@ jobs:
       # Step 8: Lint the Code
       - name: Lint Files
         run: pnpm lint
+
+    #      - name: Verify Change Logs
+    #        run: node common/scripts/install-run-rush.js change --verify
+    #      - name: Rush Install
+    #        run: node common/scripts/install-run-rush.js install
+    #      - name: Rush rebuild
+    #        run: node common/scripts/install-run-rush.js rebuild --verbose --production
