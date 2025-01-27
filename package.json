@@ -11,7 +11,9 @@
     "test:app": "pnpm --filter @etraveli/starwar-universe-app test",
     "test:lib": "pnpm --filter @etraveli/ui-library test",
     "build:lib": "pnpm --filter @etraveli/ui-library build",
-    "build:app": "pnpm --filter @etraveli/starwar-universe-app dev"
+    "build:app": "pnpm --filter @etraveli/starwar-universe-app dev",
+    "build": "rush build --verbose --to git:origin/main",
+    "test": "rush test"
   },
   "keywords": [],
   "license": "ISC"
